@@ -6,7 +6,6 @@ npx create-expo-app@latest
 
 ```
 
-
 ## Get started
 
 ```bash
@@ -23,9 +22,6 @@ npx expo start -c // el flag "-c" Limpiar la cache
 
 ```
 
-
-
-
 ```sh
 # Formato dark ios --> command + shift + a 
 
@@ -40,8 +36,6 @@ npx expo start -c // el flag "-c" Limpiar la cache
 
 ```
 
-
-
 ## Resetar el proyecto
 
 Para dejar el projecto con lo básico de dependencias.
@@ -49,10 +43,6 @@ Para dejar el projecto con lo básico de dependencias.
 ```bash
 npm run reset-project
 ```
-
-
-
-
 
 ## Libraries Install
 
@@ -90,7 +80,6 @@ plugins: [],
 }
 <--->
 
-
 # Luego en la raíz principal el archivo:
 
 ./global.css
@@ -100,7 +89,6 @@ plugins: [],
 @tailwind components;
 @tailwind utilities;
 <--->
-
 
 
 # Luego crear el archivo: babel.config.js
@@ -145,7 +133,6 @@ import "../global.css"
 
 ```
 
-
 ## Expo bar
 
 ```sh
@@ -161,7 +148,6 @@ npx expo install expo-haptics
 
 ```
 
-
 ## Drawer
 referencia: https://docs.expo.dev/router/advanced/drawer/
 
@@ -173,8 +159,6 @@ react-native-reanimated
 
 ```
 
-
-
 ## AXIOS
 
 Intalación de axios
@@ -184,8 +168,6 @@ Intalación de axios
 npm install axios
 
 ```
-
-
 
 ## Tanstack Query
 
@@ -197,9 +179,6 @@ npm i @tanstack/react-query
 
 ```
 
-
-
-
 ## Carousel
 
 ref: https://www.npmjs.com/package/react-native-reanimated-carousel
@@ -209,9 +188,6 @@ ref: https://www.npmjs.com/package/react-native-reanimated-carousel
 npx expo install react-native-reanimated-carousel
 
 ```
-
-
-
 
 ## Linear Gradient
 
@@ -229,6 +205,22 @@ ref: https://docs.expo.dev/develop/user-interface/store-data/
 ```sh
 
 npx expo install @react-native-async-storage/async-storage
+
+```
+## Expo Location
+
+ref: https://docs.expo.dev/versions/latest/sdk/location/
+
+```sh
+
+npx expo install expo-location
+
+```
+## Zustand
+
+```sh
+
+npm install zustand
 
 ```
 

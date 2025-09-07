@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/presentation/hooks/useColorScheme';
+import PermissionsCheckerProvider from '@/presentation/providers/PermissionsCheckerProvider';
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -19,26 +20,33 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
 
-        <Stack.Screen 
-          name='loading/index.tsx' 
-          options={{animation: 'none'}}
-        />
-        <Stack.Screen 
-          name='map/index.tsx' 
-          options={{animation: 'fade'}}
-        />
-        <Stack.Screen 
-          name='permissions/index.tsx' 
-          options={{animation: 'fade'}}
-        />
+      <PermissionsCheckerProvider>
 
-      </Stack>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+
+          <Stack.Screen 
+            name='loading/index.tsx' 
+            options={{animation: 'none'}}
+          />
+          <Stack.Screen 
+            name='map/index.tsx' 
+            options={{animation: 'fade'}}
+          />
+          <Stack.Screen 
+            name='permissions/index.tsx' 
+            options={{animation: 'fade'}}
+          />
+
+        </Stack>
+
+      </PermissionsCheckerProvider>
+
+
       <StatusBar style="auto" />
     </ThemeProvider>
   );

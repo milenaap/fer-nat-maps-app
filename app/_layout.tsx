@@ -4,9 +4,9 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 import { useColorScheme } from '@/presentation/hooks/useColorScheme';
-import "../global.css"
 
 import PermissionsCheckerProvider from '@/presentation/providers/PermissionsCheckerProvider';
+import "../global.css"
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -31,15 +31,15 @@ export default function RootLayout() {
         >
 
           <Stack.Screen 
-            name='loading/index.tsx' 
+            name='loading/index' 
             options={{animation: 'none'}}
           />
           <Stack.Screen 
-            name='map/index.tsx' 
+            name='map/index' 
             options={{animation: 'fade'}}
           />
           <Stack.Screen 
-            name='permissions/index.tsx' 
+            name='permissions/index' 
             options={{animation: 'fade'}}
           />
 

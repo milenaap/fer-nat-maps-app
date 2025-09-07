@@ -3,8 +3,9 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
-
 import { useColorScheme } from '@/presentation/hooks/useColorScheme';
+import "../global.css"
+
 import PermissionsCheckerProvider from '@/presentation/providers/PermissionsCheckerProvider';
 
 export default function RootLayout() {

@@ -53,8 +53,7 @@ Guide: https://www.nativewind.dev/docs/getting-started/installation
 
 ```sh
 
-npx expo install nativewind react-native-reanimated@~3.17.4
-react-native-safe-area-context@5.4.0
+npx expo install nativewind react-native-reanimated@~3.17.4 react-native-safe-area-context@5.4.0
 npx expo install --dev tailwindcss@^3.4.17 prettier-plugin-tailwindcss@^0.5.11
 
 
@@ -65,19 +64,18 @@ npx tailwindcss init
 <--->
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-// NOTE: Update this to include the paths to all files that contain
-Nativewind classes.
-content: [
-"./app/**/*.{js,jsx,ts,tsx}",
-"./components/**/*.{js,jsx,ts,tsx}",
-"./presentation/**/*.{js,jsx,ts,tsx}",
-],
-presets: [require("nativewind/preset")],
-theme: {
-extend: {},
-},
-plugins: [],
-}
+  // NOTE: Update this to include the paths to all files that contain Nativewind classes.
+  content: [
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./presentation/**/*.{js,jsx,ts,tsx}",
+  ],
+  presets: [require("nativewind/preset")],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
 <--->
 
 # Luego en la raíz principal el archivo:
@@ -95,13 +93,13 @@ plugins: [],
 
 <--->
 module.exports = function (api) {
-api.cache(true);
-return {
-presets: [
-["babel-preset-expo", { jsxImportSource: "nativewind" }],
-"nativewind/babel",
-],
-};
+  api.cache(true);
+  return {
+    presets: [
+      ["babel-preset-expo", { jsxImportSource: "nativewind" }],
+      "nativewind/babel",
+    ],
+  };
 };
 <--->
 
